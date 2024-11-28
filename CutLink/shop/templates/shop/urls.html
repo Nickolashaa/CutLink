@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои ссылки</title>
+    <link rel="stylesheet" href="{% static "shop/style.css" %}">
+    <link rel="stylesheet" href="{% static "shop/fontawesome-free-6.6.0-web/css/all.min.css" %}">
+</head>
+<body>
+    <header class="header fixed">
+        <div class="logo">
+            <img src="{% static "shop/logo.png" %}" alt="logo" width="100">
+        </div>
+        <div class="logo-text">
+            CUT<i class="fa-solid fa-scissors skissors"></i>LINK
+        </div>
+        <div class="btns">
+            <a class="btn" href="{% url "home" %}">Главная</a>
+            <a class="btn" href="{% url "about" %}">Про нас</a>
+            <a class="btn" href="{% url "profile" %}">Профиль</a>
+            <a class="btn" href="{% url "urls" %}">Ссылки</a>
+        </div>
+    </header>
+    <main class="url-main">
+        <div class="url-form reg-form">
+            <form method="POST" class="url-full-form">
+                {% csrf_token %}
+                {{ form }}
+                <button class="btn url-btn">Сократить</button>
+            </form>
+        </div>
+        <div class="all-urls">
+        {% for url in request.user.url_set.all %}
+            <div class="url">
+                <a href="{{url.first_url}}">{{url.second_url}}</a>
+            </div>
+        {% empty %}
+        <div class="not-url">Еще нет сокращенных ссылок</div>
+        {% endfor %}
+        </div>
+    </main>
+    <footer class="footer fixed">
+        <div class="footer-text">
+            <span>&copy; 2024</span>
+            <span>Грачев Николай Романович</span>
+            <span>Все права защищены.</span>
+        </div>
+        <div class="icons">
+            <a href="https://t.me/Nick331045"><i class="fa-brands fa-telegram icon"></i></a>
+            <a href="mailto:gracevnikolaj220@gmail.com"><i class="fa-regular fa-envelope icon"></i></a>
+            <a href="https://vk.com/yakapustaa"><i class="fa-brands fa-vk icon"></i></a>
+        </div>
+    </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="{% static "shop/index.js" %}"></script>
+</body>
+</html>

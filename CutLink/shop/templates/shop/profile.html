@@ -1,0 +1,39 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+{% block main %}
+<div class="profile-block">
+    <div class="up">
+        <div class="left">
+            <img src="{{ user.profile.image.url }}" alt=":(" width="256" height="256">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ imageform }}
+                <button type="submit" class="btn image">Сохранить</button>
+            </form>
+        </div>
+        <div class="right">
+            <form method="POST" class="profile-form">
+                {% csrf_token %}
+                <div>Контактная информация</div>
+                <div>Никнейм: {{ loginform.username }}</div>
+                <div>Email: {{ loginform.email }}</div>
+                <div>Немного обо мне</div>
+                <div class="big-text">{{ textform }}</div>
+                <button type="submit" class="btn bnt-text">Сохранить</button>
+            </form>
+        </div>
+</div>
+<div>
+    <form action="{% url "exit" %}" method="POST" class="profile-btn btn exit-btn-div eb">
+        {% csrf_token %}
+        <button>Выйти</button>
+    </form>
+</div>
+    
+    
+
+{% endblock main %}

@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-size: 24px;
+    font-family: "PT Mono", monospace;
+    color: greenyellow;
+
+}
+
+a {
+    all: unset;
+}
+
+button {
+    all: unset;
+}
+
+.header {
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+    display: flex;
+}
+
+.logo-text {
+    font-size: 64px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    line-height: 15vh;
+    cursor: default;
+    padding-left: 30px;
+}
+
+.main {
+    background-color: black;
+    height: 65vh;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.btn {
+    border: 2px solid greenyellow;
+    border-radius: 50px;
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    font-family: "PT Mono", monospace;
+}
+
+.btn:hover {
+    background-color: greenyellow;
+    color: black;
+    cursor: pointer;
+    scale: 1.3;
+}
+
+.skissors {
+    font-size: 50px;
+}
+
+.footer {
+    display: flex;
+    background-color: black;
+    height: 20vh;
+    
+    
+}
+
+.footer .footer-text {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 50px;
+    margin-left: 20px;
+    font-family: "PT Mono", monospace;
+}
+
+.footer-text span {
+    display: block;
+    font-family: "PT Mono", monospace;
+}
+
+.footer-text span:first-child {
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.icon {
+    margin-left: 30px;
+    font-size: 64px;
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    cursor: pointer;
+    scale: 1.3;
+}
+
+.fa-telegram:hover {
+    color: #0088cc;
+}
+
+.fa-envelope:hover {
+    color: #c4302b;
+}
+
+.fa-vk:hover {
+    color: #4C75A3;
+}
+
+.big_p > p{
+    text-align: center;
+    font-size: 128px;
+    padding-top: 30px;
+}
+
+.mini_p {
+    text-align: center;
+    padding-top: 10px;
+    font-family: "PT Mono", monospace;
+}
+
+.big-btn {
+    border: 2px solid greenyellow;
+    border-radius: 50px;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 0 auto;
+    margin-top: 100px;
+    font-size: 90px;
+    font-family: "PT Mono", monospace;
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+.big-btn:hover {
+    scale: 1.2;
+    background-color: greenyellow;
+    color: black;
+    content: "haha";
+    cursor: pointer;
+
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 96px;
+    padding-top: 15px;
+    font-family: "PT Mono", monospace;
+}
+
+.about-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto 0 auto;
+}
+
+.about-ul > div {
+    font-family: "PT Mono", monospace;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.span-url {
+    border: 2px solid greenyellow;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 36px;
+    transition: all 0.2s ease;
+    font-family: "PT Mono", monospace;
+}
+
+.span-url:hover {
+    background-color: greenyellow;
+    color: black;
+    cursor: pointer;
+    scale: 1.3;
+}
+
+.div-form {
+    width: 75%;
+    margin: 0 auto 0 auto;
+    border: 2px solid greenyellow;
+    border-radius: 50px;
+}
+
+
+.reg-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-form > div{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 20px 0;
+}
+
+.reg-form > div > input{
+    background-color: black;
+    color: greenyellow;
+    border: 2px solid greenyellow;
+    border-radius: 50px;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+}
+
+.reg-form > div > input::placeholder{
+    color: greenyellow;
+    font-family: "PT Mono", monospace;
+    text-align: center;
+}
+
+.btn-div {
+    width: 50%;
+    margin: 0 auto 0 auto;
+}
+
+.btn-black {
+    background-color: black;
+    text-align: center;
+    font-size: 48px;
+}
+
+.message-div {
+    text-align: center;
+    font-family: "PT Mono", monospace;
+    font-size: 36px;
+    line-height: 15vh;
+    padding: 0 10px 0 10px;
+    margin-left: 320px;
+    border: solid 2px greenyellow;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.errorlist {
+    list-style-type: none;
+}
+
+.errorlist > li {display: none}
+
+.errorlist > li:first-child {
+    display: block;
+    border: 2px solid red;
+    color: red;
+    font-family: "PT Mono", monospace;
+    width: 40%;
+    text-align: center;
+    margin: 15px auto 15px auto;
+    font-size: 28px;
+    padding: 7px;
+}
+
+label {display: none}
+
+.exit-btn-div {
+    margin: 0 auto 0 auto;
+    border: 2px solid greenyellow;
+    border-radius: 50px;
+    font-size: 48px;
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.exit-btn-div:hover {
+    background-color: greenyellow;
+    color: black;
+    scale: 1.3;
+    cursor: pointer;
+}
+
+.css-input {
+    text-align: center;
+    background-color: black;
+    color: greenyellow;
+    border: 2px solid greenyellow;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    width: 600px;
+}
+
+.big-text-block {
+    width: 900px;
+    height: 160px;
+    margin-top: 20px;
+}
+
+.css-input::placeholder {
+    color: greenyellow;
+}
+
+.mini-btn {
+    width: 100px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.profile-block {
+    border: 2px solid greenyellow;
+    border-radius: 50px;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+    height: 60vh;
+
+}
+
+.up {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.left, .right, .down {
+    border: 2px solid greenyellow;
+    border-radius: 20px;
+}
+
+.right {
+    margin-right: auto;
+    width: 1000px;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.eb {
+    margin-top: 40px;
+    width: 10%;
+}
+
+.image {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.bnt-text {
+    margin-left: 400px;
+}
+
+.url-main {
+    background-color: black;
+    min-height: 65vh;
+}
+
+.url-form { 
+    width: 50%;
+    margin: 0 auto 0 auto;
+    border: 2px solid greenyellow;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.url-full-form {
+    margin: 0 auto 0 auto;
+    width: 100%;
+}
+
+.url-link {
+    font-size: 36px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.url-btn {
+    margin-left: 35%;
+    font-size: 48px;
+}
+
+.all-urls {
+    width: 50%;
+    margin: 0 auto 0 auto;
+    border: 2px solid greenyellow;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.url {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.url:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.span-btn {
+    font-size: 64px;
+    font-weight: 900;
+}

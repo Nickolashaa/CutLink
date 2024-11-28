@@ -1,0 +1,20 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+{% block main %}
+
+<div class="big_p typewriter">
+    <p>C U T L I N K</p>
+</div>
+<div class="mini_p">Быстро сократим любую ссылку для вашего проекта</div>
+    {% if not user.is_authenticated %}
+    <a href="{% url "reg" %}">
+        <div class="big-btn">Зарегистрироваться</div></a>
+    {% else %}
+    <a href="{% url "profile" %}">
+        <div class="big-btn">Личный кабинет</div></a>
+    {% endif %}
+{% endblock main %}

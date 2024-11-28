@@ -1,0 +1,20 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+{% block main %}
+
+<h1>Легко сократим вашу ссылку</h1>
+    <div class="about-ul">
+        {% if not user.is_authenticated %}
+        <div><span class="span-url"><a href="{% url "reg" %}">Зарегистрируйтесь</a></span> на сайте</div>
+        {% else %}
+        <div>Перейдите в раздел <span class="span-url"><a href="{% url "home" %}">Ссылки</a></span></div>
+        {% endif %}
+        <div>Введите ссылку на необходимый вам ресурс</div>
+        <div>Нажмите кнопку <span class="span-btn">Сократить!</span></div>
+    </div>
+
+{% endblock main %}

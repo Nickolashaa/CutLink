@@ -1,0 +1,12 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+    {{ Exit }}
+{% endblock title %}
+
+{% block main %}
+<h1>Вы успешно вышли из аккаунта</h1>
+<div class="exit-btn-div eb">
+    <a href={% url "auth" %}>Войти</a>
+</div>
+{% endblock main %}
